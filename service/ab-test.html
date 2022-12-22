@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A/B 테스트 | 허들러스 | Hurdlers</title>
+
+    <!-- Favicons -->
+    <link href="/public/img/favicon.png" rel="icon">
+
+    <META HTTP-EQUIV="Expires" CONTENT="10">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="robots" content="index, follow" />
+    <meta name="Keywords"
+        content="Hurdlers, hurdlers, 허들러스, 그로스해킹, 그로스 해킹, 퍼포먼스 마케팅, 퍼포먼스마케팅, 그로스마케팅, 그로스 마케팅, 온라인마케팅, 온라인 마케팅, 마케팅, 전환율, cpm, cpc, roas, ga, 구글 애널리틱스, 구글애널리틱스, 애널리틱스, 태그매니저, tagmanager, tag manager, 카카오 픽셀, 픽셀, 페이스북, 광고, 전자상거래, 데이터 컨설팅, 데이터 교육" />
+    <meta name="Description" content="비즈니스에 필요한 데이터 분석, 설계, 수집과 시각화. 이 모든 것을 허들러스에서 해결해 드릴게요. 최고의 그로스해킹 파트너, 허들러스." />
+
+    <meta property="og:title" content="허들러스 | Hurdlers">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/public/img/og_img.jpg">
+    <meta property="og:description"
+        content="비즈니스에 필요한 데이터 분석, 설계, 수집과 시각화. 이 모든 것을 허들러스에서 해결해 드릴게요. 최고의 그로스해킹 파트너, 허들러스.">
+
+    <!-- font -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+
+    </script>
+
+    <script async>
+        //ex11 에서 edge로 redirect 스크립트
+        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+            window.location = 'microsoft-edge:' + window.location;
+            setTimeout(function () {
+                window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+            }, 1);
+        }
+    </script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- animation -->
+    <link href="/public/lib/animation/animate.css" rel="stylesheet" />
+    <script src="/public/lib/animation/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <link href="/public/css/reset.css" rel="stylesheet">
+    <link href="/public/css/common.css" rel="stylesheet">
+    <link href="/public/css/default.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+    <link href="/public/css/sub.css" rel="stylesheet">
+    <link href="/public/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ==================== SKIP NAV  ==================== -->
+    <div id="skipNav">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#menu">메뉴 영역 바로가기</a>
+        <a href="#main-visual">비주얼 영역 바로가기</a>
+        <a href="#container">본문 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- =================== header =================== -->
+    <header class="header" id="header">
+        <div class="inr flex-b--c">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="gnb-wrap flex-b--c">
+                <ul class="gnb-menus d-flex">
+                    <li class="gnb-menu">
+                        <a href="/about.html"><span>About</span></a>
+                        <ul class="lnb-menus">
+                            <li class="lnb-menu">
+                                <a href="/about.html">소개</a>
+                            </li>
+                            <li class="lnb-menu">
+                                <a href="/culture.html">문화</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb-menu">
+                        <a href="/service/service.html"><span>Service</span></a>
+                        <ul class="lnb-menus">
+                            <li class="lnb-menu">
+                                <a href="/service/data-setting.html">데이터 설계 및 세팅</a>
+                            </li>
+                            <li class="lnb-menu">
+                                <a href="/service/performance.html">퍼포먼스 마케팅</a>
+                            </li>
+                            <li class="lnb-menu">
+                                <a href="/service/consulting.html">컨설팅 및 교육</a>
+                            </li>
+                            <li class="lnb-menu">
+                                <a href="/service/ab-test.html">A/B 테스트</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="gnb-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="gnb-menu"><a href="/blog.html">Blog/News</a></li>
+                    <li class="gnb-menu"><a href="/recruit.html">Recruit</a></li>
+                    <li class="gnb-menu"><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg"></span>
+    </header>  
+    <!-- =================== sub =================== -->
+    <main id="sub" class="sub sub-service-detail">
+        <div class="sub-title">
+            <div class="inr">
+                <div class="section-tit-wrap">
+                    <h2>service</h2>
+                </div>
+            </div>
+        </div>
+        <div class="service-detail-content">
+            <div class="service-detail-top">
+                <div class="inr">
+                    <div class="prev-page">
+                        <a href="/service/service.html">
+                            <img src="/public/img/icon-prev.png" alt="이전 페이지로 이동">
+                        </a>
+                    </div>
+                    <h3>A/B 테스트</h3>
+                    <p>웹 또는 앱에서의 전환율을 개선시키는 것은 <br>
+                        그로스해킹 AARRR 모델에서의 가장 첫 단추입니다.
+                    </p>
+                    <span class="more">
+                        <a href="javascript:void(0)" onclick="comingSoon();">상품 소개서 다운로드</a>
+                    </span>
+                </div>
+            </div>
+            <div class="service-detail-titlebar">
+                <div class="inr">
+                    <p>
+                        그로스해킹 테크닉에서 가장 정점에 있는 A/B 테스트는 <br>
+                        아이러니하게도 가장 인간적이어야 성과가 발생합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="sub-service-content">
+                <div class="inr">
+                    <div class="flex-b--c availiable-tit">
+                        <h3>불규칙적인 인간의 무의식과 감정을 <br>
+                            자극할 수 있는 A/B 테스트를 실시합니다.
+                        </h3>
+                        <span class="more">
+                            <a href="/contact.html">프로젝트 문의하기</a>
+                        </span>
+                    </div>
+                    <div class="container">
+                        <ul class="available-lists row">
+                            <li class="availiable-list col-4">
+                                <div class="available-list-content">
+                                    <span class="num">01</span>
+                                    <dl>
+                                        <dt>다양한 경험</dt>
+                                        <dd>
+                                            다양한 업종과 다양한 
+                                            환경에서의 A/B 테스트 
+                                            성공 사례를 보유하고 있습니다. 
+                                            전문 A/B 테스트 그로스 
+                                            매니저들이 프로젝트를 
+                                            운영하여 성과를 만들어냅니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="availiable-list col-4">
+                                <div class="available-list-content">
+                                    <span class="num">02</span>
+                                    <dl>
+                                        <dt>합리적인 가격</dt>
+                                        <dd>
+                                            사실 A/B 테스트는 손이 
+                                            많이 가는 프리미엄 
+                                            서비스였습니다. 하지만, 
+                                            허들러스는 시스템을 통해 
+                                            리소스를 줄여 합리적인 
+                                            가격으로 진행할 수 있습니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="availiable-list col-4">
+                                <div class="available-list-content">
+                                    <span class="num">03</span>
+                                    <dl>
+                                        <dt>결국엔 성과</dt>
+                                        <dd>
+                                            전환율을 상승시키는 것이 
+                                            A/B 테스트의 핵심입니다. 
+                                            아무리 많이 방문해도 
+                                            이탈률이 높다면 의미없습니다.
+                                            최선을 다하는 것은 별개, 
+                                            허들러스는 성과를 만듭니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- =================== footer =================== -->
+    <footer id="footer">
+        <div class="inr flex-b--s">
+            <div class="footer-left">
+                <div class="flex-s--e">
+                    <div class="logo-wrap"><img src="/public/img/f-logo.png" alt="로고 | logo | 허들러스"></div>
+                    <span class="pdf-down"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+                </div>
+                <p class="address">서울특별시 구로구 디지털로33길 48, 305-P243호<br class="tablet-hidden">(구로동, 대륭포스트 타워7차)
+                    <br>010-4670-5248 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+                </p>
+                <p class="copy">© 2020 by Hurdlers</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>
+                        <span>about</span>
+                        <ul>
+                            <li><a href="/about.html">about</a></li>
+                            <li><a href="/culture.html">culture</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>service</span>
+                        <ul>
+                            <li><a href="/service/performance.html">performance</a></li>
+                            <li><a href="/service/ab-test.html">AB-test</a></li>
+                            <li><a href="/service/data-setting.html">datasetting</a></li>
+                            <li><a href="/service/consulting.html">consulting</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>contact</span>
+                        <ul>
+                            <li><a href="/about.html">about</a></li>
+                            <li><a href="/service/service.html">service</a></li>
+                            <li><a href="/portfolio.html">work</a></li>
+                            <li><a href="/recruit.html">recruit</a></li>
+                            <li><a href="/contact.html">contact</a></li>
+                            <li><a href="/blog.html">blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script type="text/javascript" src="/public/js/main.js"></script>

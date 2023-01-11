@@ -1,4 +1,11 @@
 /* :::::::::::::::::::::: NEW MAIN COMMON -start ::::::::::::::::::::::*/
+.new-header .btn {
+    border: none;
+}
+.new-header .btn a{
+    color: #FF5400;
+    text-decoration: underline;
+}
 /* btn */
 .new-main .new-btn-lists{
     display: flex;
@@ -26,7 +33,16 @@
     transition: all 0.3s;
 }
 .new-main .btn:hover a{
-    text-decoration: underline;
+    color: #FF5400;
+}
+.new-main .btn .hover{
+    display: none;
+}
+.new-main .btn:hover .hover{
+    display: block;
+}
+.new-main .btn:hover .default{
+    display: none;
 }
 .new-main .btn a::after{
     margin-left: 15px;
@@ -35,9 +51,31 @@
 .new-main .btn.white a::after{
     border-color: #fff;
 }
+.new-main .btn:hover,
+.new-main .btn:hover a::after {
+    border-color: #FF5400;
+}
 .new-main .btn.orange a::after,
 .new-main .btn.orange{
     border-color: #FF5400;
+}
+.new-main .btn.orange .hover{
+    display: none;
+}
+.new-main .btn.orange:hover .hover{
+    display: block;
+}
+.new-main .btn.orange:hover .default{
+    display: none;
+}
+.new-main .btn.orange:hover a{
+    color: #fff;
+}
+.new-main .btn.orange:hover a::after{
+    border-color: #fff;
+}
+.new-main .btn.orange:hover{
+    background-color: #FF5400;
 }
 .new-main .btn.black{
     border-color: #222;
@@ -47,6 +85,9 @@
 }
 .new-main .btn.black a{
     color: #222;
+}
+.new-main .btn.black a::after{
+    border-color: #222!important;
 }
 /* title */
 .new-main h2{
@@ -91,14 +132,17 @@
 .new-main .challenge-lists{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .new-main .challenge-list{
     border: 1px solid #eee;
     padding: 35px 35px 45px;
     border-radius: 10px;
+    transition: 0.3s all;
+    width: calc(100% / 3 - 10px);
+    height: 100%;
 }
-.new-main .challenge-list.point{
+.new-main .challenge-list:hover{
     border: none;
     background-color: #FF5400;
 }
@@ -109,30 +153,34 @@
 }
 .new-main .challege-top dl{
     margin-left: 15px;
+    transition: 0.3s all;
 }
 .new-main .challege-top dt{
     font-size: 22px;
     font-weight: 600;
     color: #FF5400;
+    transition: 0.3s all;
 }
 .new-main .challege-top dd{
     font-size: 14px;
     color: #666;
     margin-top: 2px;
+    transition: 0.3s all;
 }
 .new-main .challenge-list img{
     max-height: 80px;
 }
-.new-main .challenge-list.point dt,
-.new-main .challenge-list.point dd,
-.new-main .challenge-list.point p{
+.new-main .challenge-list:hover dt,
+.new-main .challenge-list:hover dd,
+.new-main .challenge-list:hover p{
     color: #fff;
 }
 .new-main .challenge-bottom p{
     font-size: 18px;
     color: #222;
     line-height: 1.5;
-    width: 80%;
+    width: 90%;
+    transition: 0.3s all;
 }
 /* :::::::::::::::::::::: MAIN CHALLENGE -end ::::::::::::::::::::::*/
 
@@ -159,6 +207,7 @@
 .new-main-tab-wrap .new-main-tab-lists{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .new-main-tab-lists li{
     font-size: 18px;
@@ -459,6 +508,23 @@
     .new-main h2{
         font-size: 25px;
     }
+    .new-main .new-btn-lists{
+        display: block;
+    }
+    .new-main .new-btn-lists li{
+        margin-left: 0!important;
+        margin-bottom: 10px;
+    }
+    .new-main .new-main-blog .btn a::after,
+    .new-main .main-visual .btn a::after{
+        position: absolute;
+        right: 10px;
+    }
+    .new-main .new-main-blog .btn,
+    .new-main .main-visual .btn{
+        width: 238px;
+        position: relative;
+    }
     .new-main h2 .font-thin{
         font-size: 16px;
     }
@@ -471,14 +537,11 @@
         width: 60%;
     }
     .new-main .btn{
-        padding: 10px 5px;
+        padding: 10px;
     }
     .new-main .btn a{
         font-size: 14px;
         white-space: nowrap;
-    }
-    .new-main .btn figure{
-       display: none;
     }
     .new-main .challenge-lists{
         flex-direction: column;
@@ -533,11 +596,14 @@
     .new-main-quick-lists{
         gap: 10px;
     }
-    .new-main-quick-list{
-        width: calc(100%/2 - 5px);
+    .new-main-quick-list a{
+        display: block;
     }
     .new-main-quick-list figure{
-        display: none;
+        margin-bottom: 5px;
+    }
+    .new-main-quick-list{
+        width: calc(100%/2 - 5px);
     }
     .new-main-quick-list .after-arrow.right::after, .new-main-quick-list .before-arrow.right::before{
         display: none;
@@ -572,6 +638,20 @@
     }
     .new-main-banner-02 {
         background: url(/public/img/new-index/img-new-main-banner02-mb.jpg) no-repeat top / cover;
+    }
+
+    .subscription-wrap .input-wrap{
+        display: block;
+    }
+    .subscription-wrap .input-wrap .btn{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        position: relative;
+    }
+    .subscription-wrap .input-wrap .btn a::after{
+        position: absolute;
+        right: 10px;
     }
     
 }

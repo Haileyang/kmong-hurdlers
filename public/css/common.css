@@ -144,7 +144,7 @@
     z-index: 100;
 }
 .header-bg.is_active{
-    height: 250px; 
+    height: 350px; 
     border-top: 1px solid #FF5400;
     border-bottom: 1px solid #FF5400;
 }
